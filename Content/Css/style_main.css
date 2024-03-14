@@ -1,0 +1,750 @@
+/* ================= FONT ================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+
+/* ======================================= ROOT ======================================= */
+:root {
+  --header-height: 3.5rem;
+
+  /* ------------------ Color ------------------ */
+  --black-color: hsl(0, 0%, 5%);
+  --black-color-light: hsl(0, 0%, 70%);
+  --white-color: hsl(0, 0%, 100%);
+  --title-color: hsl(0, 0%, 5%);
+  --text-color: hsl(0, 0%, 55%);
+  --body-color: hsl(0, 0%, 96%);
+
+  --light: #f6f6f9;
+  --primary: #1976d2;
+  --dark-grey: #aaaaaa;
+  --dark: #363949;
+
+  /*------- Dune-color -------*/
+  --silver-color: hsl(206, 6%, 73%);
+  --lightslategray-color: hsl(202, 15%, 54%);
+  --slategray-color: hsl(195, 10%, 49%);
+  --dimgray-1-color: hsl(192, 13%, 42%);
+  --dimgray-2-color: hsl(200, 17%, 41%);
+  --darkslategray-1-color: hsl(193, 20%, 30%);
+  --darkslategray-2-color: hsl(193, 22%, 28%);
+  --darkslategray-3-color: hsl(199, 28%, 17%);
+  --black-1-color: hsl(206, 16%, 10%);
+  --black-2-color: hsl(0, 0%, 3%);
+  --logo-color: hsl(176, 17%, 17%);
+
+  /*------- Main-color -------*/
+  --grey: #eee;
+  --color-white: #fff;
+
+  /*------- Validate -------*/
+  --color-primary: #6c9bcf;
+  --color-danger: #ff0060;
+  --color-success: #1b9c85;
+  --color-warning: #f7d060;
+  --color-info-dark: #7d8da1;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+
+  /*------- Border -------*/
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+
+  /*------- Padding-top-bottom -------*/
+  --padding-1: 1.2rem;
+
+  /* ================= Font and typography ================ */
+  /* 5rem = 8px / 1rem = 16px ... */
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Monomaniac One", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /* ================= font Weight ================ */
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+/*============================ BASE =============================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*============================ REUSALBE CSS CLASSES =============================*/
+.container {
+  margin-inline: auto;
+  max-width: 1140px;
+}
+.space-container {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.font-container {
+  font-size: 3rem;
+  font-family: var(--second-font);
+}
+
+.button-shop {
+  margin: 0.5rem 0;
+  padding: 10px 25px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+/*============================ HEADER / NAV =============================*/
+.dune {
+  background-color: var(--white-color);
+}
+.dune img {
+  width: 1.6rem;
+  padding: 5px 0;
+}
+.header {
+  margin-bottom: 10px;
+}
+.nav {
+  height: calc(var(--header-height) + 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav__logo h1 {
+  font-size: 2rem;
+  font-family: var(--second-font);
+  color: var(--black-2-color);
+  margin-right: 6rem;
+}
+.nav__list {
+  display: flex;
+  column-gap: 2rem;
+}
+.nav__list a {
+  /* font-family: var(--second-font); */
+  font-weight: var(--font-bold);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: var(--darkslategray-1-color);
+  border-bottom: 3px solid transparent;
+  transition: 0.4s;
+}
+.nav__list a:hover {
+  border-bottom: 3px solid var(--darkslategray-1-color);
+  transition: 0.4s;
+}
+/*------------------------------ SEARCH INPUT------------------------------ */
+nav form .form-input {
+  display: flex;
+  align-items: center;
+  height: 2.25rem;
+  width: 18.75rem;
+}
+nav form .form-input input {
+  flex-grow: 1;
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  background: var(--grey);
+  border-radius: 36px 0 0 36px;
+  outline: none;
+  width: 100%;
+  color: var(--dark);
+}
+
+nav form .form-input button {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black-color-light);
+  color: var(--black-1-color);
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 0 36px 36px 0;
+  cursor: pointer;
+}
+
+/* ---------------- Shopping-bag ---------------- */
+.shopping-bag {
+  position: relative;
+  font-size: 30px;
+  margin-left: 30px;
+}
+.shopping-bag a {
+  color: var(--darkslategray-3-color);
+}
+
+.shopping-bag span {
+  font-size: 10px;
+  position: absolute;
+  background-color: var(--black-1-color);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  top: 50%;
+  right: -10px;
+}
+/* ---------------- USER ---------------- */
+.user-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+.sub-menu-wrap {
+  position: absolute;
+  top: 80%;
+  right: 0%;
+  width: 300px;
+  max-height: 0px;
+  z-index: 100;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+.sub-menu {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+}
+.user-infor {
+  display: flex;
+  align-items: center;
+}
+.user-infor h3 {
+  font-weight: 500;
+}
+.user-infor img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
+  margin: 15px 0 10px;
+}
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  color: #525252;
+  margin: 12px 0;
+}
+.sub-menu-link p {
+  width: 100%;
+  cursor: pointer;
+}
+.sub-menu-link span {
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
+/* ---------------- END USER ---------------- */
+
+/*============================ MAIN =============================*/
+/* ---------------- BRAND AND POSTER ---------------- */
+.main_box {
+  display: flex;
+}
+.main_aside {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 13rem auto;
+}
+
+aside .sidebar {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius-2);
+}
+
+aside .sidebar a {
+  display: flex;
+  align-items: center;
+  color: var(--color-info-dark);
+  font-size: 16px;
+  height: 6rem;
+  gap: 2rem;
+  position: relative;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a span img {
+  width: 30px;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a span {
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a:hover {
+  color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+  margin-left: 0.6rem;
+}
+
+.poster img {
+  border-radius: var(--border-radius-2);
+}
+/* ---------------- Commercial DUNE ---------------- */
+.section .commercial_dune video {
+  border-radius: var(--border-radius-1);
+}
+.section .commercial_title {
+  text-align: center;
+}
+/*============================ END MAIN =============================*/
+
+/*============================ REGISTER =============================*/
+/* ---------------- LOGIN IN FORM ---------------- */
+.form_container {
+  width: 100%;
+  border-radius: var(--border-radius-2);
+  background: var(--color-primary);
+  margin-top: var(--padding-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.form_container h2 {
+  font-family: var(--body-font);
+  font-size: 2rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.input_alert {
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-1);
+}
+.input_alert.success,
+.input_alert.error span {
+  display: block;
+}
+.input_alert.success {
+  background-color: #1b9c85;
+}
+
+.input_alert.error {
+  background-color: #ff0060;
+}
+
+.input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 600px;
+  height: 60px;
+}
+.input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 40px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus {
+  border-color: #10182f;
+}
+
+.input_box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+}
+
+.input_box i.email,
+.input_box i.password {
+  left: 10px;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+  color: var(--primary);
+}
+.input_box i.pw_hide {
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_container a {
+  color: var(--primary);
+  font-size: 12px;
+}
+
+.form_container a:hover {
+  text-decoration: underline;
+}
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+.checkbox input {
+  accent-color: var(--primary);
+}
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+}
+
+.form_container .button {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  margin-top: 3rem;
+}
+.form_container .button:hover,
+.form_container .button:focus {
+  opacity: 0.75;
+}
+
+.login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+/* ---------------- END LOGIN IN FORM ---------------- */
+
+/* ---------------- SIGN UP FORM ---------------- */
+.form .title {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 2rem;
+  position: relative;
+}
+.form .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.content .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  justify-content: center;
+  margin: 20px 0 12px 0;
+}
+.user-details .input-box {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+  font-family: var(--body-font);
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #10182f;
+}
+/* ------------ INPUT IMG ------------- */
+.input_file {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: var(--border-radius-1);
+}
+.img-area {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #ffffff;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img-area .icon {
+  font-size: 100px;
+}
+.img-area h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.img-area p {
+  color: #999;
+}
+.img-area p span {
+  font-weight: 600;
+}
+.img-area img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 100;
+}
+.img-area::before {
+  content: attr(data-img);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 227, 227, 0.5);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+.img-area.active:hover::before {
+  opacity: 1;
+}
+.input_file input[type="button"] {
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 15px;
+  background: #ffffff;
+  color: #252222;
+  font-weight: var(--font-bold);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.input_file input[type="button"]:hover {
+  background: #d8d8d8;
+}
+.input_file input[value] .select-box {
+  color: #999;
+  font-weight: 900;
+  font-size: larger;
+}
+/* ------------ END INPUT IMG ------------- */
+/* ---------------- END SIGN UP FORM ---------------- */
+
+/* ---------------- EDIT PROFILE ---------------- */
+/* ---------------- END EDIT PROFILE ---------------- */
+
+/*============================ START FOOTER =============================*/
+.footer {
+  margin-top: 40px;
+  width: 95%;
+  background: var(--black-1-color);
+  border-radius: 6px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  color: #bfbfbf;
+}
+
+.footer-col .links.blur li a {
+  opacity: 0.5;
+}
+.footer-col .links.solid li a {
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  margin-top: 20px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer-col .icons i:hover {
+  color: #fff;
+}
+/*============================ END FOOTER =============================*/

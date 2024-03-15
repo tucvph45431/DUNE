@@ -2,6 +2,7 @@
 <img src="<?= $CONTENT_URL; ?>/Images/client/<?= isset($_SESSION['user']) ? $_SESSION['user']['img_client'] : "user.png" ?>" class="user-pic" onclick="toggleMenu()">
 <div class="sub-menu-wrap" id="subMenu">
     <div class="sub-menu">
+
         <div class="user-infor">
             <img src="<?= $CONTENT_URL; ?>/Images/client/<?= isset($_SESSION['user']['img_client']) ? $_SESSION['user']['img_client'] : "user.png" ?>" alt="">
             <h3><?= isset($_SESSION['user']['name_client']) ? $_SESSION['user']['name_client'] : "" ?> </h3>

@@ -31,12 +31,11 @@
     </aside>
 
     <section class="main_section">
-        <div class="section">
-            <div class="poster">
-                <img src="../../Content/Images/poster/poster_2.jpg" alt="">
-            </div>
-        </div>
 
+        <div class="poster">
+            <img src="../../Content/Images/poster/poster_2.jpg" alt="">
+
+        </div>
     </section>
     <script>
 

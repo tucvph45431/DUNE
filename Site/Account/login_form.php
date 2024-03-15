@@ -12,7 +12,6 @@
                     <span>' . $MESSAGE . '</span>
                     </div>';
             }
-
             ?>
 
             <!-- input email -->

@@ -72,7 +72,7 @@
             </div>
 
             <?php
-            require "Main/login_client.php";
+            require "Main/login.php";
             ?>
 
         </nav>
@@ -95,6 +95,7 @@
             subMenu.classList.toggle("open-menu");
         }
     </script>
+    <script src="<?= $CONTENT_URL ?>/Js/app.js"></script>
 </body>
 
 </html>

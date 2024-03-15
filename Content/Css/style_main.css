@@ -1,7 +1,6 @@
 /* ================= FONT ================ */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
-
 /* ======================================= ROOT ======================================= */
 :root {
   --header-height: 3.5rem;
@@ -57,13 +56,16 @@
   /* 5rem = 8px / 1rem = 16px ... */
   --body-font: "Poppins", sans-serif;
   --second-font: "Monomaniac One", sans-serif;
+  --third-font: "Poppins", sans-serif;
   --biggest-font-size: 2.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
 
   /* ================= font Weight ================ */
-  --font-regular: 400;
+  --font-regular: 300;
+  --font-medium: 500;
+  --font-semibold: 600;
   --font-bold: 700;
 }
 
@@ -107,7 +109,8 @@ img {
 
 .font-container {
   font-size: 3rem;
-  font-family: var(--second-font);
+  color: var(--black-2-color);
+  /* font-family: var(--second-font); */
 }
 
 .button-shop {
@@ -153,11 +156,10 @@ img {
   column-gap: 2rem;
 }
 .nav__list a {
-  /* font-family: var(--second-font); */
-  font-weight: var(--font-bold);
+  font-weight: var(--font-semibold);
   font-size: 1rem;
   letter-spacing: 0.1rem;
-  color: var(--darkslategray-1-color);
+  color: var(--black-1-color);
   border-bottom: 3px solid transparent;
   transition: 0.4s;
 }
@@ -313,12 +315,17 @@ aside .sidebar {
 aside .sidebar a {
   display: flex;
   align-items: center;
-  color: var(--color-info-dark);
   font-size: 16px;
   height: 6rem;
   gap: 2rem;
   position: relative;
   margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a h4 {
+  font-weight: var(--font-medium);
+  color: var(--color-info-dark);
   transition: all 0.3s ease;
 }
 
@@ -331,8 +338,8 @@ aside .sidebar a span {
   transition: all 0.3s ease;
 }
 
-aside .sidebar a:hover {
-  color: var(--color-primary);
+aside .sidebar a:hover h4 {
+  color: var(--black-2-color);
 }
 
 aside .sidebar a:hover span {
@@ -340,7 +347,7 @@ aside .sidebar a:hover span {
 }
 
 .poster img {
-  border-radius: var(--border-radius-2);
+  border-radius: var(--border-radius-1);
 }
 /* ---------------- Commercial DUNE ---------------- */
 .section .commercial_dune video {

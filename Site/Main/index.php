@@ -1,7 +1,6 @@
 <?php
 require "../../global.php";
-require "../../Dao/control_Product.php";
-require "../../Dao/control_Commodity.php";
+
 extract($_REQUEST);
 if (exist_param('men', $_REQUEST)) {
     $VIEW_NAME = "men.php";
@@ -26,8 +25,5 @@ if (exist_param('men', $_REQUEST)) {
 } else {
     $VIEW_NAME = "home.php";
 }
-$upcoming = select_product_by_date();
-$trending = select_product_top10();
-$games_of_the_year = select_product_special();
-$list_Commodity = show_commodity();
+
 require "../layout.php";
